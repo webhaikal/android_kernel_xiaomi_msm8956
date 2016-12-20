@@ -156,7 +156,6 @@ choice
 		  any workload. It also tries to guarantee low latency to
 		  interactive and soft real-time applications.
 
-<<<<<<< HEAD
 	config DEFAULT_TRIPNDROID
  		bool "TRIPNDROID" if IOSCHED_TRIPNDROID=y
 
@@ -166,8 +165,6 @@ choice
 	config DEFAULT_ZEN
 		bool "ZEN" if IOSCHED_ZEN=y
 
-=======
->>>>>>> b12a96d6... block: cgroups, kconfig, build bits for BFQ-v7r8-3.10.8+
 	config DEFAULT_NOOP
 		bool "No-op"
 
