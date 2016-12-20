@@ -35,7 +35,7 @@ echo $zipfile
 zip -r9 $zipfile * -x README *.zip
 
 outdir=(/usr/share/nginx/html/SenseiKernel/SenseiKenzo*)
-if [ ${outdir[@]} -gt 2]; then
+if [ ${#outdir[@]} -gt 2]; then
 sudo ls -t | sed -e '1,3d' | xargs -d '\n' sudo rm
 fi
 
