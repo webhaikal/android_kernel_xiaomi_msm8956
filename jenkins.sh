@@ -25,8 +25,8 @@ if ! [ -s $KERN_IMG ];
 fi
 $DTBTOOL -2 -o $KERNEL_DIR/arch/arm64/boot/dt.img -s 2048 -p $KERNEL_DIR/scripts/dtc/ $KERNEL_DIR/arch/arm/boot/dts/
 
-rm $BUILD_DIR/Image
-rm $BUILD_DIR/dt.img
+rm $BUILD_DIR/tools/Image
+rm $BUILD_DIR/tools/dt.img
 cp -vr $KERNEL_DIR/arch/arm64/boot/Image $BUILD_DIR/tools/Image
 cp $KERNEL_DIR/arch/arm64/boot/dt.img $BUILD_DIR/tools/dt.img
 cd $BUILD_DIR
