@@ -10,11 +10,11 @@ export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER="Haikal Izzuddin"
 export KBUILD_BUILD_HOST="haikalizz"
-STRIP="/home/heywhite69/sensei/uber4.9/bin/aarch64-linux-android-strip"
+STRIP="/home/heywhite69/sensei/uber6/uber/bin/aarch64-linux-android-strip"
 BUILD_DIR=$KERNEL_DIR/../output2
 MODULES_DIR="${KERNEL_DIR}/../output2/modules"
 
-export CROSS_COMPILE="/home/heywhite69/sensei/uber4.9/bin/aarch64-linux-android-"
+export CROSS_COMPILE="/home/heywhite69/sensei/uber6/uber/bin/aarch64-linux-android-"
 make cyanogenmod_kenzo_defconfig
 make -j5 CONFIG_NO_ERROR_ON_MISMATCH=y
 
@@ -34,8 +34,8 @@ zipfile="SenseiKenzo-$VERSION+$TC-$(date +"%Y-%m-%d(%I.%M%p)").zip"
 echo $zipfile
 zip -r9 $zipfile * -x README *.zip
 
-outdir=(/usr/share/nginx/html/SenseiKernel/SenseiKenzo*)
-if [ ${#outdir[@]} -gt 2]; then
+outdir=(/usr/share/nginx/html/SenseiKernel/*)
+if [ ${#outdir[@]} -gt 2 ]; then
 sudo ls -t | sed -e '1,3d' | xargs -d '\n' sudo rm
 fi
 
