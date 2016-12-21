@@ -1231,9 +1231,6 @@ void audit_log_format(struct audit_buffer *ab, const char *fmt, ...)
 {
 	va_list args;
 
-	if (console_loglevel < CONSOLE_LOGLEVEL_DEFAULT)
-		return;
-
 	if (!ab)
 		return;
 	va_start(args, fmt);
