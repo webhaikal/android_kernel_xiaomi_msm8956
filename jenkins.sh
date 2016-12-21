@@ -27,7 +27,7 @@ $DTBTOOL -2 -o $KERNEL_DIR/arch/arm64/boot/dt.img -s 2048 -p $KERNEL_DIR/scripts
 
 rm $BUILD_DIR/tools/Image
 rm $BUILD_DIR/tools/dt.img
-mv -vr $KERNEL_DIR/arch/arm64/boot/Image $BUILD_DIR/tools/Image
+mv $KERNEL_DIR/arch/arm64/boot/Image $BUILD_DIR/tools/Image
 mv $KERNEL_DIR/arch/arm64/boot/dt.img $BUILD_DIR/tools/dt.img
 cd $BUILD_DIR
 zipfile="SenseiKenzo-$VERSION+$TC-$(date +"%Y-%m-%d(%I.%M%p)").zip"
