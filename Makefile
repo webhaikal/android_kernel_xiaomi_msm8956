@@ -349,7 +349,7 @@ CHECKFLAGS     := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
 CFLAGS_MODULE   =
 AFLAGS_MODULE   =
 LDFLAGS_MODULE  =
-CFLAGS_KERNEL	= -mcpu=cortex-a72.cortex-a53+crypto -mtune=cortex-a72.cortex-a53
+CFLAGS_KERNEL	= 
 AFLAGS_KERNEL	=
 CFLAGS_GCOV	= -fprofile-arcs -ftest-coverage
 
@@ -379,15 +379,8 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -Werror-implicit-function-declaration \
 		   -Wno-format-security \
 		   -fno-delete-null-pointer-checks \
-		   -Wno-deprecated-declarations \
-		   -Wno-misleading-indentation \
-		   -Wno-unused-const-variable \
-		   -Wno-shift-overflow \
-		   -Wno-bool-compare \
-		   -Wno-memset-transposed-args \
-		   -Wno-discarded-array-qualifiers -std=gnu89 \
-		   -Wno-tautological-compare -Wno-array-bounds
-		      
+		   -std=gnu89
+		  		      
 
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
