@@ -27,15 +27,15 @@ $DTBTOOL -2 -o $KERNEL_DIR/arch/arm64/boot/dt.img -s 2048 -p $KERNEL_DIR/scripts
 
 rm $BUILD_DIR/tools/Image
 rm $BUILD_DIR/tools/dt.img
-cp -vr $KERNEL_DIR/arch/arm64/boot/Image $BUILD_DIR/tools/Image
-cp $KERNEL_DIR/arch/arm64/boot/dt.img $BUILD_DIR/tools/dt.img
+mv -vr $KERNEL_DIR/arch/arm64/boot/Image $BUILD_DIR/tools/Image
+mv $KERNEL_DIR/arch/arm64/boot/dt.img $BUILD_DIR/tools/dt.img
 cd $BUILD_DIR
 zipfile="SenseiKenzo-$VERSION+$TC-$(date +"%Y-%m-%d(%I.%M%p)").zip"
 echo $zipfile
 zip -r9 $zipfile * -x README *.zip
 
 outdir=(/usr/share/nginx/html/SenseiKernel/*)
-if [ ${#outdir[@]} -gt 2 ]; then
+if [ ${#outdir[@]} -gt 3 ]; then
 sudo ls -t | sed -e '1,3d' | xargs -d '\n' sudo rm
 fi
 
