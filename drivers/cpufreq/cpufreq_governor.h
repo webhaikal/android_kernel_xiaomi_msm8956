@@ -206,11 +206,6 @@ struct nm_cpu_dbs_info_s {
 	struct cpufreq_frequency_table *freq_table;
 };
 
-=======
-	unsigned int enable:1;
-};
-
->>>>>>> 783d1f1... ElementalX governor version 2
 /* Per policy Governors sysfs tunables */
 struct od_dbs_tuners {
 	unsigned int ignore_nice_load;
@@ -232,16 +227,6 @@ struct cs_dbs_tuners {
 	unsigned int sleep_depth;
 	unsigned int boost_enabled;
 	unsigned int boost_count;
-};
-
-struct ex_dbs_tuners {
-	unsigned int ignore_nice_load;
-	unsigned int sampling_rate;
-	unsigned int up_threshold;
-	unsigned int down_differential;
-	unsigned int active_floor_freq;
-	unsigned int sampling_down_factor;
-	unsigned int powersave;
 };
 
 struct zz_dbs_tuners {
